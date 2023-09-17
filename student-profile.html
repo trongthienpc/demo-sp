@@ -1,0 +1,971 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <title>Form Layouts | thientt - Admin Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="thientt" name="author">
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets\images\favicon.ico">
+
+    <!-- Bootstrap Css -->
+    <link href="assets\css\bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css">
+    <!-- Icons Css -->
+    <link href="assets\css\icons.min.css" rel="stylesheet" type="text/css">
+    <!-- App Css-->
+    <link href="assets\css\app.min.css" id="app-style" rel="stylesheet" type="text/css">
+
+</head>
+
+<body data-sidebar="dark">
+
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+
+        <header id="page-topbar">
+            <div class="navbar-header">
+                <div class="d-flex">
+                    <!-- LOGO -->
+                    <div class="navbar-brand-box">
+                        <a href="index.html" class="logo logo-dark">
+                            <span class="logo-sm">
+                                <img src="assets\images\logo.svg" alt="" height="22">
+                            </span>
+                            <span class="logo-lg">
+                                <img src="assets\images\logo-dark.png" alt="" height="17">
+                            </span>
+                        </a>
+
+                        <a href="index.html" class="logo logo-light">
+                            <span class="logo-sm">
+                                <img src="assets\images\logo-light.svg" alt="" height="22">
+                            </span>
+                            <span class="logo-lg">
+                                <img src="assets\images\logo-light.png" alt="" height="19">
+                            </span>
+                        </a>
+                    </div>
+
+                    <button type="button" class="btn btn-sm px-3 font-size-16 header-item waves-effect"
+                        id="vertical-menu-btn">
+                        <i class="fa fa-fw fa-bars"></i>
+                    </button>
+
+                    <!-- App Search-->
+                    <form class="app-search d-none d-lg-block">
+                        <div class="position-relative">
+                            <input type="text" class="form-control" placeholder="Search...">
+                            <span class="bx bx-search-alt"></span>
+                        </div>
+                    </form>
+
+                </div>
+
+                <div class="d-flex">
+
+                    <div class="dropdown d-inline-block d-lg-none ml-2">
+                        <button type="button" class="btn header-item noti-icon waves-effect"
+                            id="page-header-search-dropdown" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            <i class="mdi mdi-magnify"></i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right p-0"
+                            aria-labelledby="page-header-search-dropdown">
+
+                            <form class="p-3">
+                                <div class="form-group m-0">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Search ..."
+                                            aria-label="Recipient's username">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="submit"><i
+                                                    class="mdi mdi-magnify"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="dropdown d-none d-lg-inline-block ml-1">
+                        <button type="button" class="btn header-item noti-icon waves-effect" data-toggle="fullscreen">
+                            <i class="bx bx-fullscreen"></i>
+                        </button>
+                    </div>
+
+                    <div class="dropdown d-inline-block">
+                        <button type="button" class="btn header-item noti-icon waves-effect"
+                            id="page-header-notifications-dropdown" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            <i class="bx bx-bell bx-tada"></i>
+                            <span class="badge badge-danger badge-pill">3</span>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right p-0"
+                            aria-labelledby="page-header-notifications-dropdown">
+                            <div class="p-3">
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                        <h6 class="m-0"> Thông báo </h6>
+                                    </div>
+                                    <div class="col-auto">
+                                        <a href="#!" class="small"> Xem tất cả</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-simplebar="" style="max-height: 230px;">
+                                <a href="" class="text-reset notification-item">
+                                    <div class="media">
+                                        <div class="avatar-xs mr-3">
+                                            <span class="avatar-title bg-primary rounded-circle font-size-16">
+                                                <i class='bx bx-clipboard'></i>
+                                            </span>
+                                        </div>
+                                        <div class="media-body">
+                                            <h6 class="mt-0 mb-1">Thi học kỳ 1</h6>
+                                            <div class="font-size-12 text-muted">
+                                                <p class="mb-1">Chuẩn bị tài liệu cho kì thi học kỳ 1 lớp 6</p>
+                                                <p class="mb-0"><i class="mdi mdi-clock-outline"></i> 5 phút trước</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="" class="text-reset notification-item">
+                                    <div class="media">
+                                        <div class="avatar-xs mr-3">
+                                            <span class="avatar-title bg-primary rounded-circle font-size-16">
+                                                <i class='bx bx-calendar-event'></i>
+                                            </span>
+                                        </div>
+                                        <div class="media-body">
+                                            <h6 class="mt-0 mb-1">Sinh nhật trong 02 ngày tới</h6>
+                                            <div class="font-size-12 text-muted">
+                                                <p class="mb-1">Danh sách các bạn có sinh nhật trong 2 ngày tới</p>
+                                                <p class="mb-0"><i class="mdi mdi-clock-outline"></i> 3 giờ trước</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="" class="text-reset notification-item">
+                                    <div class="media">
+                                        <div class="avatar-xs mr-3">
+                                            <span class="avatar-title bg-success rounded-circle font-size-16">
+                                                <i class="bx bx-badge-check"></i>
+                                            </span>
+                                        </div>
+                                        <div class="media-body">
+                                            <h6 class="mt-0 mb-1">Kết quả học tập</h6>
+                                            <div class="font-size-12 text-muted">
+                                                <p class="mb-1">Đã có kết quả học tập chi tiết của các lớp 6a1, 6a2</p>
+                                                <p class="mb-0"><i class="mdi mdi-clock-outline"></i> 6 giờ trước</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+
+                            </div>
+                            <div class="p-2 border-top">
+                                <a class="btn btn-sm btn-link font-size-14 btn-block text-center"
+                                    href="javascript:void(0)">
+                                    <i class="mdi mdi-arrow-right-circle mr-1"></i> Xem nhiều hơn
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dropdown d-inline-block">
+                        <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img class="rounded-circle header-profile-user" src="assets\images\users\avatar-1.jpg"
+                                alt="Header Avatar">
+                            <span class="d-none d-xl-inline-block ml-1">Cô Hana</span>
+                            <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <!-- item-->
+                            <a class="dropdown-item" href="#"><i class="bx bx-user font-size-16 align-middle mr-1"></i>
+                                Thông tin</a>
+                            <a class="dropdown-item d-block" href="#"><span
+                                    class="badge badge-success float-right">11</span><i
+                                    class="bx bx-wrench font-size-16 align-middle mr-1"></i> Cài đặt</a>
+                            <a class="dropdown-item" href="#"><i
+                                    class="bx bx-lock-open font-size-16 align-middle mr-1"></i> Khóa màn hình</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item text-danger" href="#"><i
+                                    class="bx bx-power-off font-size-16 align-middle mr-1 text-danger"></i> Đăng
+                                xuất</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <!-- ========== Left Sidebar Start ========== -->
+        <div class="vertical-menu">
+
+            <div data-simplebar="" class="h-100">
+
+                <!--- Sidemenu -->
+                <div id="sidebar-menu">
+                    <!-- Left Menu Start -->
+                    <ul class="metismenu list-unstyled" id="side-menu">
+                        <li class="menu-title">Học liệu</li>
+
+                        <li>
+                            <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                <i class="bx bx-layout"></i>
+                                <span>Khối lớp</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="true">
+                                <li><a href="#" class="has-arrow waves-effect">Lớp 1</a>
+                                    <ul class="sub-menu" aria-expanded="true">
+                                        <li><a href="document.html">Môn Ngữ văn</a></li>
+                                        <li><a href="#">Môn Toán</a></li>
+                                        <li><a href="#">Môn Tiếng Anh</a></li>
+                                        <li><a href="#">Môn Lịch sử</a></li>
+                                        <li><a href="#">Môn Địa lý</a></li>
+                                        <li><a href="#">Môn KHTN</a></li>
+                                        <li><a href="#">Môn Tin học</a></li>
+                                        <li><a href="#">Môn GDTC</a></li>
+                                        <li><a href="#">Môn Công nghệ</a></li>
+                                        <li><a href="#">Môn Nghệ thuật</a></li>
+                                        <li><a href="#">Môn GDCD</a></li>
+                                        <li><a href="#">Môn HDTN</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#" class="has-arrow waves-effect">Lớp 2</a>
+                                    <ul class="sub-menu" aria-expanded="true">
+                                        <li><a href="#">Môn Ngữ văn</a></li>
+                                        <li><a href="#">Môn Toán</a></li>
+                                        <li><a href="#">Môn Tiếng Anh</a></li>
+                                        <li><a href="#">Môn Lịch sử</a></li>
+                                        <li><a href="#">Môn Địa lý</a></li>
+                                        <li><a href="#">Môn KHTN</a></li>
+                                        <li><a href="#">Môn Tin học</a></li>
+                                        <li><a href="#">Môn GDTC</a></li>
+                                        <li><a href="#">Môn Công nghệ</a></li>
+                                        <li><a href="#">Môn Nghệ thuật</a></li>
+                                        <li><a href="#">Môn GDCD</a></li>
+                                        <li><a href="#">Môn HDTN</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#" class="has-arrow waves-effect">Lớp 3</a>
+                                    <ul class="sub-menu" aria-expanded="true">
+                                        <li><a href="#">Môn Ngữ văn</a></li>
+                                        <li><a href="#">Môn Toán</a></li>
+                                        <li><a href="#">Môn Tiếng Anh</a></li>
+                                        <li><a href="#">Môn Lịch sử</a></li>
+                                        <li><a href="#">Môn Địa lý</a></li>
+                                        <li><a href="#">Môn KHTN</a></li>
+                                        <li><a href="#">Môn Tin học</a></li>
+                                        <li><a href="#">Môn GDTC</a></li>
+                                        <li><a href="#">Môn Công nghệ</a></li>
+                                        <li><a href="#">Môn Nghệ thuật</a></li>
+                                        <li><a href="#">Môn GDCD</a></li>
+                                        <li><a href="#">Môn HDTN</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#" class="has-arrow waves-effect">Lớp 4</a>
+                                    <ul class="sub-menu" aria-expanded="true">
+                                        <li><a href="#">Môn Ngữ văn</a></li>
+                                        <li><a href="#">Môn Toán</a></li>
+                                        <li><a href="#">Môn Tiếng Anh</a></li>
+                                        <li><a href="#">Môn Lịch sử</a></li>
+                                        <li><a href="#">Môn Địa lý</a></li>
+                                        <li><a href="#">Môn KHTN</a></li>
+                                        <li><a href="#">Môn Tin học</a></li>
+                                        <li><a href="#">Môn GDTC</a></li>
+                                        <li><a href="#">Môn Công nghệ</a></li>
+                                        <li><a href="#">Môn Nghệ thuật</a></li>
+                                        <li><a href="#">Môn GDCD</a></li>
+                                        <li><a href="#">Môn HDTN</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#" class="has-arrow waves-effect">Lớp 5</a>
+                                    <ul class="sub-menu" aria-expanded="true">
+                                        <li><a href="#">Môn Ngữ văn</a></li>
+                                        <li><a href="#">Môn Toán</a></li>
+                                        <li><a href="#">Môn Tiếng Anh</a></li>
+                                        <li><a href="#">Môn Lịch sử</a></li>
+                                        <li><a href="#">Môn Địa lý</a></li>
+                                        <li><a href="#">Môn KHTN</a></li>
+                                        <li><a href="#">Môn Tin học</a></li>
+                                        <li><a href="#">Môn GDTC</a></li>
+                                        <li><a href="#">Môn Công nghệ</a></li>
+                                        <li><a href="#">Môn Nghệ thuật</a></li>
+                                        <li><a href="#">Môn GDCD</a></li>
+                                        <li><a href="#">Môn HDTN</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#" class="has-arrow waves-effect">Lớp 6</a>
+                                    <ul class="sub-menu" aria-expanded="true">
+                                        <li><a href="#">Môn Ngữ văn</a></li>
+                                        <li><a href="#">Môn Toán</a></li>
+                                        <li><a href="#">Môn Tiếng Anh</a></li>
+                                        <li><a href="#">Môn Lịch sử</a></li>
+                                        <li><a href="#">Môn Địa lý</a></li>
+                                        <li><a href="#">Môn KHTN</a></li>
+                                        <li><a href="#">Môn Tin học</a></li>
+                                        <li><a href="#">Môn GDTC</a></li>
+                                        <li><a href="#">Môn Công nghệ</a></li>
+                                        <li><a href="#">Môn Nghệ thuật</a></li>
+                                        <li><a href="#">Môn GDCD</a></li>
+                                        <li><a href="#">Môn HDTN</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#" class="has-arrow waves-effect">Lớp 7</a>
+                                    <ul class="sub-menu" aria-expanded="true">
+                                        <li><a href="#">Môn Ngữ văn</a></li>
+                                        <li><a href="#">Môn Toán</a></li>
+                                        <li><a href="#">Môn Tiếng Anh</a></li>
+                                        <li><a href="#">Môn Lịch sử</a></li>
+                                        <li><a href="#">Môn Địa lý</a></li>
+                                        <li><a href="#">Môn KHTN</a></li>
+                                        <li><a href="#">Môn Tin học</a></li>
+                                        <li><a href="#">Môn GDTC</a></li>
+                                        <li><a href="#">Môn Công nghệ</a></li>
+                                        <li><a href="#">Môn Nghệ thuật</a></li>
+                                        <li><a href="#">Môn GDCD</a></li>
+                                        <li><a href="#">Môn HDTN</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#" class="has-arrow waves-effect">Lớp 8</a>
+                                    <ul class="sub-menu" aria-expanded="true">
+                                        <li><a href="#">Môn Ngữ văn</a></li>
+                                        <li><a href="#">Môn Toán</a></li>
+                                        <li><a href="#">Môn Tiếng Anh</a></li>
+                                        <li><a href="#">Môn Lịch sử</a></li>
+                                        <li><a href="#">Môn Địa lý</a></li>
+                                        <li><a href="#">Môn KHTN</a></li>
+                                        <li><a href="#">Môn Tin học</a></li>
+                                        <li><a href="#">Môn GDTC</a></li>
+                                        <li><a href="#">Môn Công nghệ</a></li>
+                                        <li><a href="#">Môn Nghệ thuật</a></li>
+                                        <li><a href="#">Môn GDCD</a></li>
+                                        <li><a href="#">Môn HDTN</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#" class="has-arrow waves-effect">Lớp 10</a>
+                                    <ul class="sub-menu" aria-expanded="true">
+                                        <li><a href="#">Môn Ngữ văn</a></li>
+                                        <li><a href="#">Môn Toán</a></li>
+                                        <li><a href="#">Môn Tiếng Anh</a></li>
+                                        <li><a href="#">Môn Lịch sử</a></li>
+                                        <li><a href="#">Môn Địa lý</a></li>
+                                        <li><a href="#">Môn KHTN</a></li>
+                                        <li><a href="#">Môn Tin học</a></li>
+                                        <li><a href="#">Môn GDTC</a></li>
+                                        <li><a href="#">Môn Công nghệ</a></li>
+                                        <li><a href="#">Môn Nghệ thuật</a></li>
+                                        <li><a href="#">Môn GDCD</a></li>
+                                        <li><a href="#">Môn HDTN</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#" class="has-arrow waves-effect">Lớp 11</a>
+                                    <ul class="sub-menu" aria-expanded="true">
+                                        <li><a href="#">Môn Ngữ văn</a></li>
+                                        <li><a href="#">Môn Toán</a></li>
+                                        <li><a href="#">Môn Tiếng Anh</a></li>
+                                        <li><a href="#">Môn Lịch sử</a></li>
+                                        <li><a href="#">Môn Địa lý</a></li>
+                                        <li><a href="#">Môn KHTN</a></li>
+                                        <li><a href="#">Môn Tin học</a></li>
+                                        <li><a href="#">Môn GDTC</a></li>
+                                        <li><a href="#">Môn Công nghệ</a></li>
+                                        <li><a href="#">Môn Nghệ thuật</a></li>
+                                        <li><a href="#">Môn GDCD</a></li>
+                                        <li><a href="#">Môn HDTN</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#" class="has-arrow waves-effect">Lớp 12</a>
+                                    <ul class="sub-menu" aria-expanded="true">
+                                        <li><a href="#">Môn Ngữ văn</a></li>
+                                        <li><a href="#">Môn Toán</a></li>
+                                        <li><a href="#">Môn Tiếng Anh</a></li>
+                                        <li><a href="#">Môn Lịch sử</a></li>
+                                        <li><a href="#">Môn Địa lý</a></li>
+                                        <li><a href="#">Môn KHTN</a></li>
+                                        <li><a href="#">Môn Tin học</a></li>
+                                        <li><a href="#">Môn GDTC</a></li>
+                                        <li><a href="#">Môn Công nghệ</a></li>
+                                        <li><a href="#">Môn Nghệ thuật</a></li>
+                                        <li><a href="#">Môn GDCD</a></li>
+                                        <li><a href="#">Môn HDTN</a></li>
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </li>
+
+                        <li class="menu-title">Quản lý</li>
+                        <li>
+                            <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                <i class="bx bx-briefcase-alt-2"></i>
+                                <span>Dự án</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="#">Danh sách dự án</a></li>
+                                <li><a href="#">Thêm mới dự án</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                <i class="bx bx-task"></i>
+                                <span>Quản lý công việc</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="#">Danh sách công việc</a></li>
+                                <li><a href="#">Thêm mới công việc</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                <i class="bx bxs-user-detail"></i>
+                                <span>Quản lý học sinh</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="javascript: void(0);" class="has-arrow waves-effect">Danh sách học sinh</a>
+                                    <ul class="sub-menu" aria-expanded="false">
+                                        <li><a href="students-list.html">Lớp 6</a></li>
+                                        <li><a href="students-list.html">Lớp 7</a></li>
+                                        <li><a href="students-list.html">Lớp 8</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="student-profile.html">Thông tin chi tiết</a></li>
+                                <li><a href="add-student.html">Thêm học sinh</a></li>
+                            </ul>
+
+                        </li>
+
+                        <li class="menu-title">Pages</li>
+
+                        <li>
+                            <a href="chat.html" class=" waves-effect">
+                                <i class="bx bx-chat"></i>
+                                <span class="badge badge-pill badge-success float-right">New</span>
+                                <span>Chat</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="calendar.html" class=" waves-effect">
+                                <i class="bx bx-calendar"></i>
+                                <span>calendar</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="auth-lock-screen.html" class=" waves-effect">
+                                <i class="bx bx-lock"></i>
+                                <span>Khóa màn hình</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="auth-login.html" class=" waves-effect">
+                                <i class="bx bx-user-check"></i>
+                                <span>Đăng nhập</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="auth-register.html" class=" waves-effect">
+                                <i class="bx bx-user-plus"></i>
+                                <span>Đăng ký</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+                <!-- Sidebar -->
+            </div>
+        </div>
+        <!-- Left Sidebar End -->
+
+        <!-- ============================================================== -->
+        <!-- Start right Content here -->
+        <!-- ============================================================== -->
+        <div class="main-content">
+
+            <div class="page-content">
+                <div class="container-fluid">
+
+                    <!-- start page title -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box d-flex align-items-center justify-content-between">
+                                <h4 class="mb-0 font-size-18">Thông tin học sinh</h4>
+
+                                <div class="page-title-right">
+                                    <ol class="breadcrumb m-0">
+                                        <li class="breadcrumb-item"><a href="javascript: void(0);">học sinh</a></li>
+                                        <li class="breadcrumb-item active">thông tin chi tiết</li>
+                                    </ol>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end page title -->
+                    <div class="row mb-3">
+                        <div class="col d-flex justify-content-end">
+                            <button type="button" class="btn btn-success mr-1 waves-effect waves-light"
+                                data-toggle="modal" data-target="#mark">Thêm điểm</button>
+                            <button type="button" class="btn btn-primary waves-effect waves-light" data-toggle="modal"
+                                data-target="#markList">Thêm danh sách</button>
+
+                            <!-- sample modal content -->
+                            <div id="mark" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title mt-0" id="myModalLabel">Thêm điểm học sinh theo danh
+                                                sách
+                                            </h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <label for="formrow-firstname-input">Môn học</label>
+                                                        <select id="formrow-inputState" class="form-control">
+                                                            <option selected="">Chọn ...</option>
+                                                            <option>Toán</option>
+                                                            <option>Văn</option>
+                                                            <option>Anh</option>
+                                                            <option>Sinh</option>
+                                                            <option>Sử</option>
+                                                            <option>Địa</option>
+                                                            <option>Lý</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <label for="formrow-firstname-input">Hình thức</label>
+                                                        <select id="formrow-inputState" class="form-control">
+                                                            <option selected="">Chọn ...</option>
+                                                            <option>Kiểm tra 15p</option>
+                                                            <option>Kiểm tra 45p</option>
+                                                            <option>Kiểm tra GK</option>
+                                                            <option>Kiểm tra HKI</option>
+                                                            <option>Kiểm tra HKII</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <label for="formrow-firstname-input">Điểm</label>
+                                                        <input type="text" name="" class="form-control" id="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <label for="formrow-firstname-input">Ngày kiểm tra</label>
+                                                        <input class="form-control" type="date" value="2019-08-19"
+                                                            id="example-date-input">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary waves-effect"
+                                                data-dismiss="modal">Đóng</button>
+                                            <button type="button"
+                                                class="btn btn-primary waves-effect waves-light">Lưu</button>
+                                        </div>
+                                    </div><!-- /.modal-content -->
+                                </div><!-- /.modal-dialog -->
+                            </div><!-- /.modal -->
+
+                            <!-- sample modal content -->
+                            <div id="markList" class="modal fade" tabindex="-1" role="dialog"
+                                aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title mt-0" id="myModalLabel">Thêm điểm học sinh theo danh
+                                                sách
+                                            </h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <h5>Hãy chọn danh sách điểm cần thêm</h5>
+                                            <p class="muted">Hỗ trợ định dạng file excel, json, ...</p>
+                                            <input type="file" class="form-control-file" name="" id="">
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary waves-effect"
+                                                data-dismiss="modal">Đóng</button>
+                                            <button type="button"
+                                                class="btn btn-primary waves-effect waves-light">Lưu</button>
+                                        </div>
+                                    </div><!-- /.modal-content -->
+                                </div><!-- /.modal-dialog -->
+                            </div><!-- /.modal -->
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-4">
+                            <div class="card overflow-hidden">
+                                <div class="bg-soft-primary">
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <div class="text-primary p-3">
+                                                <h5 class="text-primary">Chào mừng quay lại !</h5>
+                                                <!-- <p>Đây là thông tin chi tiết của bạn học sinh này</p> -->
+                                            </div>
+                                        </div>
+                                        <div class="col-5 align-self-end">
+                                            <img src="assets\images\profile-img.png" alt="" class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body pt-0">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="avatar-md profile-user-wid mb-4">
+                                                <img src="assets\images\users\avatar-3.jpg" alt=""
+                                                    class="img-thumbnail rounded-circle">
+                                            </div>
+                                            <h5 class="font-size-15 text-truncate">Trần Văn Tèo</h5>
+                                            <p class="text-muted mb-0 text-truncate">19/09/2009</p>
+                                        </div>
+
+                                        <div class="col-sm-8">
+                                            <div class="pt-4">
+
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <h5 class="font-size-15">Lớp 8</h5>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <h5 class="font-size-15">14 tuổi</h5>
+                                                    </div>
+                                                </div>
+                                                <div class="mt-4">
+                                                    <a href=""
+                                                        class="btn btn-primary waves-effect waves-light btn-sm">Thông
+                                                        tin phụ huynh <i class="mdi mdi-arrow-right ml-1"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end card -->
+
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title mb-4">Thông tin khái quát</h4>
+
+                                    <p class="text-muted mb-4">Tèo là một học sinh thông minh, chịu khó và có đầu óc
+                                        kinh doanh từ nhỏ. Bạn thường tổ chức cờ bạc trong lớp và đã mời phụ huynh 03
+                                        lần.</p>
+                                    <div class="table-responsive">
+                                        <table class="table table-nowrap mb-0">
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">Họ tên :</th>
+                                                    <td>Nguyễn Văn Tèo</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Điện thoại :</th>
+                                                    <td>0907 386 684</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">E-mail :</th>
+                                                    <td>teoFE2009@gmail.com</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Địa chỉ :</th>
+                                                    <td>313, Lộ mới, k3, p3, TP. Mỹ Tho</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end card -->
+
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title mb-5">Những lần gặp phụ huynh gần đây</h4>
+                                    <div class="">
+                                        <ul class="verti-timeline list-unstyled">
+                                            <li class="event-list active">
+                                                <div class="event-timeline-dot">
+                                                    <i class="bx bx-right-arrow-circle bx-fade-right"></i>
+                                                </div>
+                                                <div class="media">
+                                                    <div class="mr-3">
+                                                        <i class="bx bx-error-circle h4 text-danger"></i>
+                                                    </div>
+                                                    <div class="media-body">
+                                                        <div>
+                                                            <h5 class="font-size-15">
+                                                                <a href="#" class="text-dark">Đánh tiến lên trong giờ
+                                                                    giải lao</a>
+                                                            </h5>
+                                                            <span class="text-primary">12/9/2023</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="event-list">
+                                                <div class="event-timeline-dot">
+                                                    <i class="bx bx-right-arrow-circle"></i>
+                                                </div>
+                                                <div class="media">
+                                                    <div class="mr-3">
+                                                        <i class="bx bx-error-alt h4 text-danger"></i>
+                                                    </div>
+                                                    <div class="media-body">
+                                                        <div>
+                                                            <h5 class="font-size-15"><a href="#" class="text-dark">Bán
+                                                                    thuốc lá cho các bạn nữ</a></h5>
+                                                            <span class="text-primary">23/8/2023</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="event-list">
+                                                <div class="event-timeline-dot">
+                                                    <i class="bx bx-right-arrow-circle"></i>
+                                                </div>
+                                                <div class="media">
+                                                    <div class="mr-3">
+                                                        <i class="bx bx-error h4 text-warning"></i>
+                                                    </div>
+                                                    <div class="media-body">
+                                                        <div>
+                                                            <h5 class="font-size-15"><a href="#" class="text-dark">Cho
+                                                                    bạn vay lãi suất cao</a></h5>
+                                                            <span class="text-primary">06/06/2023</span>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- end card -->
+                        </div>
+
+                        <div class="col-xl-8">
+
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="card mini-stats-wid">
+                                        <div class="card-body">
+                                            <div class="media">
+                                                <div class="media-body">
+                                                    <p class="text-muted font-weight-medium">Học phí đã đóng</p>
+                                                    <h4 class="mb-0">125.000</h4>
+                                                </div>
+
+                                                <div
+                                                    class="mini-stat-icon avatar-sm align-self-center rounded-circle bg-primary">
+                                                    <span class="avatar-title">
+                                                        <i class="bx bx-check-circle font-size-24"></i>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card mini-stats-wid">
+                                        <div class="card-body">
+                                            <div class="media">
+                                                <div class="media-body">
+                                                    <p class="text-muted font-weight-medium">Học phí chưa đóng</p>
+                                                    <h4 class="mb-0">750.000</h4>
+                                                </div>
+
+                                                <div
+                                                    class="avatar-sm align-self-center mini-stat-icon rounded-circle bg-primary">
+                                                    <span class="avatar-title">
+                                                        <i class="bx bx-hourglass font-size-24"></i>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card mini-stats-wid">
+                                        <div class="card-body">
+                                            <div class="media">
+                                                <div class="media-body">
+                                                    <p class="text-muted font-weight-medium">Thời gian quá hạn</p>
+                                                    <h4 class="mb-0">36 ngày</h4>
+                                                </div>
+
+                                                <div
+                                                    class="avatar-sm align-self-center mini-stat-icon rounded-circle bg-danger">
+                                                    <span class="avatar-title bg-danger">
+                                                        <i class="bx bx-package font-size-24 text-white"></i>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title mb-4">Trung bình môn hàng tháng</h4>
+                                    <div id="revenue-chart" class="apex-charts"></div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title mb-4">Các lần kiểm tra gần đây</h4>
+                                    <div class="table-responsive">
+                                        <table class="table table-nowrap table-hover mb-0">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">#</th>
+                                                    <th scope="col">Môn học</th>
+                                                    <th scope="col">Hình thức</th>
+                                                    <th scope="col">Ngày kiểm tra</th>
+                                                    <th scope="col">Số điểm</th>
+                                                    <th scope="col">Xếp hạng</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">1</th>
+                                                    <td>Môn toán</td>
+                                                    <td>Thi học kì 1</td>
+                                                    <td>02/09/2032</td>
+                                                    <td>8</td>
+                                                    <td>5</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">1</th>
+                                                    <td>Môn Anh</td>
+                                                    <td>Thi học kì 1</td>
+                                                    <td>02/09/2032</td>
+                                                    <td>5</td>
+                                                    <td>35</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">1</th>
+                                                    <td>Môn Sinh</td>
+                                                    <td>Thi học kì 1</td>
+                                                    <td>02/09/2032</td>
+                                                    <td>6</td>
+                                                    <td>30</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">1</th>
+                                                    <td>Môn Văn</td>
+                                                    <td>Thi học kì 1</td>
+                                                    <td>02/09/2032</td>
+                                                    <td>7</td>
+                                                    <td>15</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">1</th>
+                                                    <td>Môn Thể dục</td>
+                                                    <td>Thi học kì 1</td>
+                                                    <td>02/09/2032</td>
+                                                    <td>9</td>
+                                                    <td>2</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">1</th>
+                                                    <td>Môn Hóa</td>
+                                                    <td>Thi học kì 1</td>
+                                                    <td>02/09/2032</td>
+                                                    <td>4</td>
+                                                    <td>39</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">1</th>
+                                                    <td>Môn Lịch sử</td>
+                                                    <td>Thi học kì 1</td>
+                                                    <td>02/09/2032</td>
+                                                    <td>3</td>
+                                                    <td>40</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end row -->
+
+                </div> <!-- container-fluid -->
+            </div>
+            <!-- End Page-content -->
+
+
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <script>document.write(new Date().getFullYear())</script> © freelancer.
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="text-sm-right d-none d-sm-block">
+                                Modded by thientt
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <!-- end main content-->
+
+    </div>
+    <!-- END layout-wrapper -->
+
+
+
+    <!-- Right bar overlay-->
+    <div class="rightbar-overlay"></div>
+
+    <!-- JAVASCRIPT -->
+    <script src="assets\libs\jquery\jquery.min.js"></script>
+    <script src="assets\libs\bootstrap\js\bootstrap.bundle.min.js"></script>
+    <script src="assets\libs\metismenu\metisMenu.min.js"></script>
+    <script src="assets\libs\simplebar\simplebar.min.js"></script>
+    <script src="assets\libs\node-waves\waves.min.js"></script>
+
+    <!-- apexcharts -->
+    <script src="assets\libs\apexcharts\apexcharts.min.js"></script>
+
+    <script src="assets\js\pages\profile.init.js"></script>
+
+    <!-- App js -->
+    <script src="assets\js\app.js"></script>
+
+</body>
+
+</html>
